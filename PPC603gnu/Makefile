@@ -125,6 +125,10 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/DriveWithJoysticks.
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/MoveRelay.o : $(PRJ_ROOT_DIR)/Commands/MoveRelay.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.o : $(PRJ_ROOT_DIR)/Commands/MoveWinch.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -145,17 +149,23 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/DriveTrain.o : $(
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/Relay.o : $(PRJ_ROOT_DIR)/Subsystems/Relay.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.o : $(PRJ_ROOT_DIR)/Subsystems/Winch.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
 OBJECTS_CommandBasedRobotTemplate = CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/AutonomousCommand.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/DriveWithJoysticks.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/MoveRelay.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/OI.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Robot.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/RobotMap.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/DriveTrain.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/Relay.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.o
 
 CommandBasedRobotTemplate/$(MODE_DIR)/CommandBasedRobotTemplate.out : $(OBJECTS_CommandBasedRobotTemplate)
@@ -209,6 +219,10 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/Drive
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/MoveRelay.o : $(PRJ_ROOT_DIR)/Commands/MoveRelay.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.o : $(PRJ_ROOT_DIR)/Commands/MoveWinch.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -229,17 +243,23 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Dri
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Relay.o : $(PRJ_ROOT_DIR)/Subsystems/Relay.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.o : $(PRJ_ROOT_DIR)/Subsystems/Winch.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
 OBJECTS_CommandBassedRobotTemplate_partialImage = CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/AutonomousCommand.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/DriveWithJoysticks.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/MoveRelay.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/OI.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Robot.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/RobotMap.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/DriveTrain.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Relay.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.o
 
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/CommandBassedRobotTemplate_partialImage.o : $(OBJECTS_CommandBassedRobotTemplate_partialImage)
@@ -254,12 +274,13 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/CommandBassedRobotTemplate_p
 
 force : 
 
-DEP_FILES := CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/AutonomousCommand.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/DriveWithJoysticks.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/OI.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Robot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/RobotMap.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/DriveTrain.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/AutonomousCommand.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/DriveWithJoysticks.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/OI.d \
+DEP_FILES := CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/AutonomousCommand.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/DriveWithJoysticks.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/MoveRelay.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/OI.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Robot.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/RobotMap.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/DriveTrain.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/Relay.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/AutonomousCommand.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/DriveWithJoysticks.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/MoveRelay.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Commands/MoveWinch.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/OI.d \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Robot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/RobotMap.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/DriveTrain.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.d
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Relay.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/NoPID/Subsystems/Winch.d
 -include $(DEP_FILES)
 
 
