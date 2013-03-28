@@ -20,6 +20,7 @@ Winch::Winch() :
 	encoder = RobotMap::winchencoder;
 	baseLimit = RobotMap::relayLimitSwitch3; //Limit switch at the base of the winch
 	BaneBot = RobotMap::BaneBot;
+	frisbeeDumper=RobotMap::frisbeeDumper;
 
 }
 
@@ -81,6 +82,10 @@ void Winch::Move(Joystick* stick) {
 	//reset the encoder
 	if (stick->GetRawButton(7) == true) {
 		encoder->Reset();
+	}
+	
+	if(stick->GetRawButton(3)==true && stick->GetRawButton(4)==true){
+		frisbeeDumper->Set(0.45);
 	}
 }
 

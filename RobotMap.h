@@ -12,6 +12,7 @@ public:
 	static SpeedController* driveTraincim2;
 	static SpeedController* driveTraincim1;
 	static SpeedController* BaneBot;
+	static SpeedController* frisbeeDumper;
 	static RobotDrive* driveTrainRobotDrive;
 	static SpeedController* winchcim3;
 	static SpeedController* winchcim4;

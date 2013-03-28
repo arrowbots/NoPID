@@ -54,6 +54,8 @@ void RobotMap::init() {
 	
 	BaneBot= new Victor(1,5); //Add AndyMark Motor control/ map it
 	
+	frisbeeDumper=new Victor(1,6);
+	
 	driveTrainRobotDrive = new RobotDrive(driveTraincim1, driveTraincim2);
 
 	driveTrainRobotDrive->SetSafetyEnabled(true);

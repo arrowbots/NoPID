@@ -12,6 +12,7 @@ public:
 	SpeedController* cim2;
 	SpeedController* cim3;
 	SpeedController* cim4;
+	SpeedController* frisbeeDumper;
 	SpeedController* BaneBot;
 	Encoder* encoder;
 	DriverStationLCD* dsLCD;
