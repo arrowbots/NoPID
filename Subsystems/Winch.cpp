@@ -84,7 +84,7 @@ void Winch::Move(Joystick* stick) {
 		encoder->Reset();
 	}
 	
-	if(stick->GetRawButton(3)==true && stick->GetRawButton(4)==true){
+	if(stick->GetRawButton(3)==true && stick->GetRawButton(11)==true){
 		frisbeeDumper->Set(0.45);
 	}
 }
