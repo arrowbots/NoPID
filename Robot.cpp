@@ -1,8 +1,4 @@
 #include "Robot.h"
-DriveTrain* Robot::driveTrain = 0;
-Winch* Robot::winch = 0;
-OI* Robot::oi = 0;
-RelayHold* Robot::relayHold= 0;
 
 void Robot::RobotInit() {
 	RobotMap::init();
